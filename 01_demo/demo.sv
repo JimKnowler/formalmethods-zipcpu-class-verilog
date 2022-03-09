@@ -8,7 +8,7 @@ module demo(
     initial counter = 0;                // in synthesized code, or only in simulation?
 
     always @(posedge clk) begin
-        if (counter == 15)
+        if (counter == 32)
             counter <= 0;
         else
             counter <= counter + 1;
