@@ -12,6 +12,8 @@ $ sby -f memory.sby
 
 ## View trace in GTKWave
 
+When proof fails:
+
 ```bash
 $ gtkwave memory/engine_0/trace.vcd
 ```
