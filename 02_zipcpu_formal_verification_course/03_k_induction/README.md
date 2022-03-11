@@ -71,3 +71,12 @@ $ sby -f shiftregister.sby
 ```bash
 $ sby -f shiftregister2.sby
 ```
+
+## dblpipe
+
+- two shift registers running in parallel
+- prove that their output is identical
+
+```bash
+$ sby -f dbpipe.dby
+```
