@@ -4,7 +4,7 @@ Examples and exercises from 'Basics' section of verilog class.
 
 ## The Careless Assumption
 
-- A careless assumption prevents prover from finding bug.
+- A careless assumption prevents formal solver from finding bug.
 
 - Edit careless_assumption.sv, remove unhelpful assumeption at line 14, and induction will then fail as expected.
 
