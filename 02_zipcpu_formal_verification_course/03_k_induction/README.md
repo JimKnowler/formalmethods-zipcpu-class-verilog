@@ -24,6 +24,7 @@ Examples and exercises 'from the k Induction' section of the verilog class.
 - A counter that passes BMC but fails induction
     - BMC only tests states where counter is 0 ... N (where N is < 65000)
     - induction starts with counter = 65000 (which fails assertions), and finds N steps leading to it where counter<6500 (which pass assertions)
+        - the trap: formal properties are not strict enough, so induction can start in an unreachable state
 
 ```bash
 $ sby -f counter.sby
@@ -34,6 +35,7 @@ $ sby -f counter.sby
 - A counter that also passes BMC but fails induction
     - BMC can test first N states, where N can be >500 (the assert) because counter is reset at 22
     - Induction still fails because it can fail at state N by setting counter to 500, and can find N previous states where the assert fails
+        - the trap: formal properties are not strict enough, so induction can start in an unreachable state
 
 ```bash
 $ sby -f counter2.sby
