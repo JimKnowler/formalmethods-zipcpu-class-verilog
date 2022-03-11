@@ -1,0 +1,12 @@
+[options]
+mode prove
+
+[engines]
+smtbmc
+
+[script]
+read -formal shiftregister2.sv
+prep -top shiftregister2
+
+[files]
+shiftregister2.sv

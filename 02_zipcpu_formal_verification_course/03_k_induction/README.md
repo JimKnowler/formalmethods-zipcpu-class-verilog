@@ -50,3 +50,24 @@ $ sby -f counter2.sby
 ```bash
 $ sby -f counter3.sby
 ```
+
+## Shift Register 
+- requires >=16 steps for induction to pass
+    - theory: so that any random data that prover puts in shift registers has shifted out.   Initial is only applied in step 0, and induction doesn't reach back to step 0.
+
+```bash
+$ sby -f shiftregister.sby
+```
+
+## Shift Register with Chip enable
+
+- similar design to shiftregister, but it adds a 'chip enable' signal to both shift registers
+- induction fails
+    - because prover can put random data in shift registers at start of induction, and keep chipenable low in order to keep it there
+- induction passes
+    - when we add an assert that the contents of the shift registers is always identical
+    - this assert prevents induction from putting different random values into the shift registers
+
+```bash
+$ sby -f shiftregister2.sby
+```
