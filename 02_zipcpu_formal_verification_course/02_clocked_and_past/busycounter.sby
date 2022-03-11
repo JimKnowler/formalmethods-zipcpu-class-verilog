@@ -1,0 +1,12 @@
+[options]
+mode bmc
+
+[engines]
+smtbmc
+
+[script]
+read -formal busycounter.sv
+prep -top busycounter
+
+[files]
+busycounter.sv

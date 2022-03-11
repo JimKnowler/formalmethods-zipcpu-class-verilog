@@ -1,0 +1,12 @@
+[options]
+mode bmc
+
+[engines]
+smtbmc
+
+[script]
+read -formal pastassert.sv
+prep -top counter
+
+[files]
+pastassert.sv
