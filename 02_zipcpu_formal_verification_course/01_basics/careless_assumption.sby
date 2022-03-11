@@ -1,0 +1,12 @@
+[options]
+mode prove
+
+[engines]
+smtbmc
+
+[script]
+read -formal careless_assumption.sv
+prep -top careless_assumption
+
+[files]
+careless_assumption.sv
