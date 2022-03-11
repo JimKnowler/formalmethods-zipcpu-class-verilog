@@ -1,0 +1,12 @@
+[options]
+mode prove
+
+[engines]
+smtbmc
+
+[script]
+read -formal counter2.sv
+prep -top counter2
+
+[files]
+counter2.sv
